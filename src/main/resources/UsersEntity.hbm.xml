@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.grandcircus.models.UsersEntity" table="Users" schema="RideShare">
+        <id name="userId">
+            <column name="UserID" sql-type="int(11)"/>
+        </id>
+        <property name="firstName">
+            <column name="FirstName" sql-type="text"/>
+        </property>
+        <property name="lastName">
+            <column name="LastName" sql-type="text"/>
+        </property>
+        <property name="address">
+            <column name="Address" sql-type="text"/>
+        </property>
+        <property name="city">
+            <column name="City" sql-type="text"/>
+        </property>
+        <property name="state">
+            <column name="State" sql-type="text"/>
+        </property>
+        <property name="postalCode">
+            <column name="PostalCode" sql-type="text"/>
+        </property>
+        <property name="country">
+            <column name="Country" sql-type="text" not-null="true"/>
+        </property>
+        <property name="homePhone">
+            <column name="HomePhone" sql-type="text" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
